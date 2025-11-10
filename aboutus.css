@@ -1,0 +1,115 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #222;
+}
+
+/* Marquee */
+.marquee {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: #1E3A5F;
+    padding: 10px 0;
+}
+
+/* Header */
+.about-header {
+    text-align: center;
+    background: #1E3A5F;
+    color: white;
+    padding: 50px 20px;
+}
+
+.about-header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+/* Mission & Vision */
+.mission-vision {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 40px 20px;
+    background: white;
+}
+
+.mission-vision .content {
+    width: 45%;
+    background: #7b1113fa;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.2);
+}
+
+/* How We Help */
+.how-we-help {
+    text-align: center;
+    padding: 50px 20px;
+    background: white
+    color: white;
+}
+
+.help-boxes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.help-card {
+    background: white;
+    color: #1E3A5F;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+    font-size: 18px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.help-card:hover {
+    transform: scale(1.1);
+}
+
+/* Our Team */
+.our-team {
+    text-align: center;
+    padding: 50px 20px;
+    background: white;
+}
+
+.our-team img {
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+}
+
+/* Call to Action */
+.cta {
+    text-align: center;
+    padding: 50px 20px;
+    background: #1E3A5F;
+    color: white;
+}
+
+.cta-button {
+    background: #E85A4F;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    background: #F0A500;
+}

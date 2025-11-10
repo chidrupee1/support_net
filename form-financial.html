@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Financial Issue Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #1c1f4a, #0b1639),
+                  url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #1a1a1a;
+    }
+    .form-container {
+      background: #ffffffdd;
+      padding: 40px 45px;
+      border-radius: 14px;
+      width: 100%;
+      max-width: 520px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      color: #222;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-weight: 700;
+      color: #2b2b7a;
+      letter-spacing: 1.2px;
+    }
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      font-size: 14px;
+      color: #333;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 13px 16px;
+      margin-bottom: 20px;
+      border: 1.8px solid #9ca3af;
+      border-radius: 8px;
+      font-size: 15px;
+      font-family: 'Poppins', sans-serif;
+      transition: border-color 0.3s ease;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus,
+    textarea:focus,
+    select:focus {
+      border-color: #3b82f6;
+      outline: none;
+      box-shadow: 0 0 6px #3b82f6aa;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 90px;
+    }
+    button {
+      width: 100%;
+      padding: 15px;
+      background: #3b82f6;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-weight: 700;
+      font-size: 17px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #2563eb;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Financial Issue Report</h2>
+    <form onsubmit="return handleSubmit(event)">
+      <label for="name">Name (optional)</label>
+      <input type="text" id="name" name="name" placeholder="Your name" />
+
+      <label for="email">Email (optional)</label>
+      <input type="email" id="email" name="email" placeholder="your.email@example.com" />
+
+      <label for="phone">Contact Number (optional)</label>
+      <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" pattern="[+0-9\s]{10,15}" />
+
+      <label for="issueType">Select Financial Issue Type *</label>
+      <select id="issueType" name="issueType" required>
+        <option value="" disabled selected>Choose an option</option>
+        <option value="tuition">Tuition Fee</option>
+        <option value="books">Books & Supplies</option>
+        <option value="transport">Transport Expenses</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="issueDescription">Describe your financial concern *</label>
+      <textarea id="issueDescription" name="issueDescription" placeholder="Explain your financial issue..." required></textarea>
+
+      <button type="submit">Submit Issue</button>
+    </form>
+  </div>
+
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      alert("✅ Your financial issue has been submitted successfully!");
+      event.target.reset();
+      return false;
+    }
+  </script>
+</body>
+</html>

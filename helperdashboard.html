@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Helper Dashboard</title>
+  <link rel="stylesheet" href="helperdashboard.css" />
+</head>
+<body>
+
+  <header>
+    <div class="brand">Support Net</div>
+    <div class="profile">
+      Logged in as <strong>Helper</strong>
+    </div>
+  </header>
+
+  <main class="dashboard-container">
+    <section class="dashboard-info">
+      <h2>Welcome to the Helper Dashboard</h2>
+      <p>Here you can view and resolve issues submitted by students. Update the status when a concern is addressed to notify the respective teacher.</p>
+    </section>
+
+    <section class="dashboard-table">
+      <h3>Student Issues</h3>
+      <table class="issue-table">
+        <thead>
+          <tr>
+            <th>Student Name</th>
+            <th>Category</th>
+            <th>Issue</th>
+            <th>Status</th>
+            <th>Update</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- JS will populate -->
+        </tbody>
+      </table>
+    </section>
+    <tr>
+  <td>STU101</td>
+  <td>Academic</td>
+  <td>Unable to understand DBMS concepts.</td>
+  <td>2025-05-29</td>
+  <td><span class="status pending">Pending</span></td>
+  <td><button onclick="updateStatus(this)">Mark Resolved</button></td>
+</tr>
+
+<tr>
+  <td>STU102</td>
+  <td>Mental Health</td>
+  <td>Feeling anxious about exams.</td>
+  <td>2025-05-29</td>
+  <td><span class="status pending">Pending</span></td>
+  <td><button onclick="updateStatus(this)">Mark Resolved</button></td>
+</tr>
+
+<tr>
+  <td>STU103</td>
+  <td>Financial</td>
+  <td>Need assistance with tuition fees.</td>
+  <td>2025-05-30</td>
+  <td><span class="status pending">Pending</span></td>
+  <td><button onclick="updateStatus(this)">Mark Resolved</button></td>
+</tr>
+
+  </main>
+
+  <footer>
+    <p>Support Net &copy; 2025 | For assistance, contact admin@supportnet.org</p>
+  </footer>
+
+  <script src="helper_dashboard.js"></script>
+</body>
+</html>

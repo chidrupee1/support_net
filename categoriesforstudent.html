@@ -1,0 +1,233 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Choose Your Issue</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      height: 100vh;
+      background-image: 
+        linear-gradient(rgba(41, 41, 80, 0.7), rgba(71, 71, 135, 0.7)),
+        url('https://i.pinimg.com/736x/bd/1c/9e/bd1c9e305cd8cd2892bb8f3f07d7a4be.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      color: white;
+      text-align: center;
+      height:70%;
+      max-width: 900px;
+      width: 95%;
+    }
+
+    h2 {
+      margin-bottom: 25px;
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 15px;
+    }
+
+    .category-grid button {
+      padding: 15px;
+      background-color: #4a90e2;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .category-grid button:hover {
+      background-color: #2a60b8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Hey! let's get started! you have come a long way. Hold up and tell us what you are struggling with..</h1>
+    <div class="category-grid">
+      <button onclick="location.href='academic-form.html'">EDUCATIONAL AID</button>
+      <button onclick="location.href='financial-form.html'">FINANCIAL</button>
+      <button onclick="location.href='mental-health-form.html'">MENTAL HEALTH</button>
+    </div>
+  </div>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Select Issue Category</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      width: 100vw;
+      background-image: 
+        linear-gradient(rgba(40, 40, 74, 0.6), rgba(41, 41, 113, 0.6)),
+        url('https://i.pinimg.com/736x/bd/1c/9e/bd1c9e305cd8cd2892bb8f3f07d7a4be.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .wrapper {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 50px;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      color: white;
+      animation: fadeIn 1s ease-in;
+      max-width: 800px;
+      width: 100%;
+    }
+
+    .wrapper h1 {
+      font-size: 32px;
+      margin-bottom: 30px;
+      animation: floatIn 1s ease forwards;
+    }
+
+    .categories {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .category {
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 20px;
+      width: 200px;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: transform 0.3s, background-color 0.3s;
+      text-align: center;
+    }
+
+    .category:hover {
+      transform: scale(1.05);
+      background-color: rgba(33, 150, 243, 0.4);
+    }
+
+    .category img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 10px;
+    }
+    .menu-icon {
+  font-size: 28px;
+  cursor: pointer;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: #333;
+  z-index: 1001;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 220px;
+  height: 100%;
+  background-color: #512da8;
+  padding-top: 60px;
+  transition: 0.3s;
+  color: white;
+  z-index: 1000;
+}
+
+.sidebar a {
+  padding: 15px 25px;
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.sidebar a:hover {
+  background-color: #9575cd;
+}
+
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes floatIn {
+      0% { opacity: 0; transform: translateY(-30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="menu-icon" onclick="toggleSidebar()">☰</div>
+
+<div class="sidebar" id="sidebar">
+  <a href="categoriesforstudent.html">🏠 Categories</a>
+  <a href="studentdashboard.html">📋 Track Issues</a>
+  <a href="index.html">🚪 Logout</a>
+</div>
+
+  <div class="wrapper">
+    <h1>Hey! let's get started! you have come a long way. Hold up and tell us what you are struggling with..</h1>
+    <div class="categories">
+      <a href="academicform.html" class="category">
+        <img src="https://cdn-icons-png.flaticon.com/512/1903/1903162.png" alt="Academic">
+        <p><b>Academic</b></p>
+      </a>
+      <a href="form-mentalhealth.html" class="category">
+        <img src="https://cdn-icons-png.flaticon.com/512/4086/4086679.png" alt="Mental Health">
+        <p><b>Mental Health</b></p>
+      </a>
+      <a href="form-financial.html" class="category">
+        <img src="https://cdn-icons-png.flaticon.com/512/138/138292.png" alt="Financial">
+        <p><b>Financial</b></p>
+      </a>
+      <a href="form_other.html" class="category">
+        <img src="https://cdn-icons-png.flaticon.com/512/857/857681.png" alt="Other">
+        <p><b>Other</b></p>
+      </a>
+    </div>
+  </div>
+  <script>
+  function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.style.left = sidebar.style.left === '0px' ? '-250px' : '0px';
+  }
+</script>
+
+</body>
+</html>
+

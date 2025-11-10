@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Teacher Dashboard</title>
+  <link rel="stylesheet" href="teacherdashboard.css" />
+</head>
+<body>
+
+  <header>
+    <div class="left">
+      <h1>Teacher Dashboard</h1>
+    </div>
+    <div class="right">
+      <span class="notification-bell" onclick="alert('No new notifications')">🔔</span>
+      <span class="profile">👩‍🏫 Teacher</span>
+      <a href="#" class="logout">Logout</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="summary">
+      <div class="summary-box">📬 New Issues: <strong>3</strong></div>
+      <div class="summary-box">🔧 In Progress: <strong>2</strong></div>
+      <div class="summary-box">✅ Resolved: <strong>5</strong></div>
+    </section>
+
+    <h2>Student Issue Tracker</h2>
+    <div id="notifications"></div>
+
+
+    <table class="issue-table">
+      <thead>
+        <tr>
+          <th>Student Name</th>
+          <th>Category</th>
+          <th>Issue</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Balu</td>
+          <td>Academic</td>
+          <td>Struggling with physics concepts</td>
+          <td><span class="badge new">New</span></td>
+          <td><button onclick="markSeen(this)">Mark as Seen</button></td>
+        </tr>
+        <tr>
+          <td>Priya Sharma</td>
+          <td>Financial</td>
+          <td>Needs fee support</td>
+          <td><span class="badge inprogress">In Progress</span></td>
+          <td><button onclick="markSeen(this)">Mark as Seen</button></td>
+        </tr>
+        <tr>
+          <td>Rahul Verma</td>
+          <td>Mental Health</td>
+          <td>Feeling overwhelmed</td>
+          <td><span class="badge resolved">Resolved</span></td>
+          <td><button disabled>Acknowledged</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <footer>
+    &copy; 2025 Support Net – Teacher Dashboard
+  </footer>
+
+  <script src="teacherdashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>teacher Login</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      width: 100vw;
+      background-image: 
+        linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
+        url('https://i.pinimg.com/736x/57/8d/95/578d956257d900f478c6259a2329c983.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      animation: fadeIn 1s ease-in;
+      max-width: 900px;
+      width: 100%;
+    }
+
+    .login-box {
+      flex: 1;
+      color: white;
+    }
+
+    .login-box h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+
+    .login-box label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+
+    .login-box input[type="text"],
+    .login-box input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+    }
+
+    .login-box input::placeholder {
+      color: #ddd;
+    }
+
+    .login-box button {
+      width: 100%;
+      padding: 12px;
+      background: #2196f3;
+      border: none;
+      color: white;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .login-box button:hover {
+      background: #0d47a1;
+      transform: scale(1.05);
+    }
+
+    .login-box p {
+      margin-top: 15px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .login-box a {
+      color: #bbdefb;
+      text-decoration: none;
+    }
+
+    .login-box a:hover {
+      text-decoration: underline;
+    }
+
+    .illustration {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .illustration img {
+      width: 100%;
+      max-width: 300px;
+      filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .login-box .message {
+      font-size: 14px;
+      margin-top: 10px;
+      text-align: center;
+      font-style: italic;
+      color: #cfdfff;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+      100% { transform: translateY(0px); }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="login-box">
+      <h2>Teacher Login</h2>
+      <form onsubmit="handleLogin(event)">
+        <label for="student-id">Teacher ID</label>
+        <input type="text" id="student-id" placeholder="Enter your ID" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+
+        <button type="submit">Login</button>
+      </form>
+      <p>Forgot your password? <a href="#">Reset here</a></p>
+      <p class="message">"Students can grow only with your help! lets make them our future icons!"</p>
+    </div>
+
+    <div class="illustration">
+      <img src="imagesm/chalkboard-teacher.svg" alt="Student Icon">
+    </div>
+  </div>
+
+  <script>
+    function handleLogin(event) {
+      event.preventDefault();
+      const studentId = document.getElementById("student-id").value;
+      const password = document.getElementById("password").value;
+
+      if (studentId && password) {
+        window.location.href = "teacherdashboard.html";
+      } else {
+        alert("Please enter your Student ID and Password.");
+      }
+    }
+  </script>
+</body>
+</html>
+

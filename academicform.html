@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Academic Issue Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-repeat: no-repeat;
+        background-size: cover;
+      background-position: center;
+      display: flex;
+      background-image:
+        linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
+       url('https://i.pinimg.com/736x/57/8d/95/578d956257d900f478c6259a2329c983.jpg');
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #e0e6f2;
+    }
+    .form-container {
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(10px);
+      padding: 35px 40px;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 520px;
+      box-shadow: 0 0 25px rgba(0, 56, 145, 0.4);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-weight: 600;
+      color: #d0dbff;
+    }
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 500;
+      font-size: 14px;
+      color: #b9c1e0;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea,
+    input[type="file"] {
+      width: 100%;
+      padding: 11px 14px;
+      margin-bottom: 18px;
+      border: none;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.15);
+      color: #e0e6f2;
+      font-size: 15px;
+      transition: background 0.3s ease;
+    }
+    input[type="text"]::placeholder,
+    input[type="email"]::placeholder,
+    input[type="tel"]::placeholder,
+    textarea::placeholder {
+      color: #bcc3de;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus,
+    textarea:focus {
+      background: rgba(255, 255, 255, 0.3);
+      outline: none;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 90px;
+      font-family: 'Poppins', sans-serif;
+    }
+    input[type="file"] {
+      padding: 7px 10px;
+      background: transparent;
+    }
+    button {
+      width: 100%;
+      padding: 14px;
+      background: #1e40af;
+      border: none;
+      border-radius: 8px;
+      color: #e0e6f2;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      margin-top: 8px;
+    }
+    button:hover {
+      background: #2563eb;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Academic Issue Report</h2>
+    <form onsubmit="return handleSubmit(event)">
+      <label for="studentName">Name (optional)</label>
+      <input type="text" id="studentName" name="studentName" placeholder="Your name" />
+
+      <label for="studentEmail">Email (optional)</label>
+      <input type="email" id="studentEmail" name="studentEmail" placeholder="your.email@example.com" />
+
+      <label for="studentPhone">Contact Number (*required)</label>
+      <input type="tel" id="studentPhone" name="studentPhone" placeholder="+91 98765 43210" pattern="[+0-9\s]{10,15}" />
+
+      <label for="issueTitle">Issue Title *</label>
+      <input type="text" id="issueTitle" name="issueTitle" placeholder="Eg: Problem with exam schedule" required />
+
+      <label for="issueDescription">Describe your issue *</label>
+      <textarea id="issueDescription" name="issueDescription" placeholder="Explain your academic issue in detail..." required></textarea>
+
+      <label for="attachment">Attach Screenshot (optional)</label>
+      <input type="file" id="attachment" name="attachment" />
+
+      <button type="submit">Submit Issue</button>
+    </form>
+  </div>
+
+  <script src="academicform.js"> </script>
+</body>
+</html>

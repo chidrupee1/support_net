@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: url('anyimg.jpeg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Navbar */
+nav {
+    position: absolute;
+    top: 20px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.logo span {
+    color: #fff;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.buttons button {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background: white;
+    color: black;
+}
+
+/* Form Box */
+.form-container {
+    position: relative;
+    width: 350px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+    color: white;
+    transition: 0.5s;
+}
+
+.form-container .form-box {
+    display: none;
+}
+
+.form-box.active {
+    display: block;
+}
+
+.form-box h2 {
+    margin-bottom: 15px;
+}
+
+.input-box {
+    margin: 10px 0;
+    position: relative;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    padding-left: 35px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.input-box span {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.form-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: white;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.extra {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.extra a {
+    text-decoration: none;
+    color: white;
+}
